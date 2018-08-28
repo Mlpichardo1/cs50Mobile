@@ -5,10 +5,23 @@ const classNames = {
   TODO_DELETE: 'todo-delete',
 }
 
-const list = document.getElementById('todo-list')
-const itemCountSpan = document.getElementById('item-count')
-const uncheckedCountSpan = document.getElementById('unchecked-count')
+const list = document.getElementById('addTodoTextInput')
+var itemCountSpan = document.getElementById('item-count').innerHTML
+var uncheckedCountSpan = document.getElementById('unchecked-count').innerHTML
+
 
 function newTodo() {
-  alert('New TODO button clicked!')
+  var li = document.createElement("li");
+  var inputValue = document.getElementById("addTodoTextInput").value;
+  var t = document.createTextNode(inputValue);
+  li.appendChild(t);
+  if (inputValue === '') {
+    alert("You must write something!");
+  } else {
+    document.getElementById("todo-list").appendChild(li);
+
+  }
+  document.getElementById("addTodoTextInput").value = "";
+
 }
+

@@ -3,6 +3,7 @@
   <head>
     <title>TODO App</title>
     <link rel="stylesheet" type="text/css" href="./styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
   </head>
   <body>
     <div class="container center">
@@ -11,8 +12,10 @@
         <span>Item count: <span id="item-count">0</span></span>
         <span>Unchecked count: <span id="unchecked-count">0</span></span>
       </div>
-      <button class="button center" onClick="newTodo()">New TODO</button>
-      <ul id="todo-list" class="todo-list"></ul>
+      <button class="button center" onclick="newTodo()">New TODO</button>
+      <input id="addTodoTextInput" type="text">
+      <ul id="todo-list" class="todo-list">MY TODOS: </ul>
+
     </div>
     <script src="./script.js"></script>
   </body>
